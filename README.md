@@ -6,11 +6,11 @@
 
 # Descrição
 
-*A Securus Dynamics é uma empresa multinacional especializada em drones bélicos autônomos. Seu principal produto, o Aquila-X, realiza missões táticas, reconhecimento e ataques de precisão.
+A Securus Dynamics é uma empresa multinacional especializada em drones bélicos autônomos. Seu principal produto, o Aquila-X, realiza missões táticas, reconhecimento e ataques de precisão.
 
 A empresa está desenvolvendo o Falcão Sombrio, um sistema para operação remota e autônoma dos drones via servidores distribuídos e uma interface avançada. O projeto envolve desafios em sistemas operacionais (tempo real, segurança e concorrência) e banco de dados (armazenamento distribuído, replicação e logs de auditoria).
 
-Devido a falhas na arquitetura atual, a Consultoria Cyber Bullet System (Turma 4G) foi contratada para reformular o software e o banco de dados, garantindo suporte às operações críticas.*
+Devido a falhas na arquitetura atual, a Consultoria Cyber Bullet System (Turma 4G) foi contratada para reformular o software e o banco de dados, garantindo suporte às operações críticas.
 
 # Documentação
 
