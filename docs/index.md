@@ -62,6 +62,10 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
       <td>Central de Controle</td>
       <td>1.1</td>
       <td>Interface para gerenciamento de frotas de drones</td>
+      <td>1.2</td>
+      <td>Controle remoto e autônomo dos drones</td>
+      <td>1.3</td>
+      <td>Dashboard em tempo real com telemetria</td>
       <td>A central de controle é responsável por atribuir tarefas e pelo controle manual e autônomo dos drones, além da coleta de dados em tempo real.</td>
     </tr>
     <tr>
