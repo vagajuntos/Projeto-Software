@@ -60,7 +60,7 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
     <tr>
         <td>1.1</td>
         <td>- Interface para gerenciamento de frotas de drones.</td>
-        <td>Uma interface que permite gerenciar a frota de drones, proporcionando uma visualização clara e o controle dos mesmos.</td>
+        <td>Uma interface que permite gerenciar a frota de drones, proporcionando uma visualização e controle.</td>
     </tr>
     <tr>
         <td>1.2</td>
