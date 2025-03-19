@@ -105,7 +105,7 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
     <tr>
         <td>3.2</td>
         <td>- Mecanismos de fallback para evitar perda de conexão.</td>
-        <td>Estratégias para manter a comunicação estável e evitar a perda de conexão com a central, garantindo uma operação contínua.</td>
+        <td>Estratégias para manter a comunicação estável e evitar a perda de conexão com a central.</td>
     </tr>
     <tr>
         <td>4</td>
@@ -125,7 +125,7 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
     <tr>
         <td>4.3</td>
         <td>- Banco de dados NoSQL distribuído para dados em tempo real.</td>
-        <td>Sistema de banco de dados distribuído que permite atualizações e acessos em tempo real, garantindo eficiência e rapidez.</td>
+        <td>Sistema de banco de dados distribuído que permite atualizações e acessos em tempo real, garantindo mais eficiência.</td>
     </tr>
     <tr>
         <td>5</td>
