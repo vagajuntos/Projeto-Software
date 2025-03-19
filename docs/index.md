@@ -90,7 +90,7 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
     <tr>
         <td>2.3</td>
         <td>- Operação autônoma baseada em redes neurais.</td>
-        <td>Utiliza inteligência artificial baseada em redes neurais para operar os drones de forma autônoma, imitando o funcionamento do cérebro humano.</td>
+        <td>Utiliza inteligência artificial baseada em redes neurais para operar os drones de forma autônoma.</td>
     </tr>
     <tr>
         <td>3</td>
