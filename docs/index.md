@@ -110,6 +110,10 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
    
    <tr>
       <td>Central de controle</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
       </tr>
 
         <tr>
