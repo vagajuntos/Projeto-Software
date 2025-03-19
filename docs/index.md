@@ -65,7 +65,7 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
     <tr>
         <td>1.2</td>
         <td>- Controle remoto e autônomo dos drones.</td>
-        <td>Permite controlar os drones tanto manualmente quanto de forma autônoma, oferecendo flexibilidade nas operações.</td>
+        <td>Permite controlar os drones manualmente e de forma autônoma, oferecendo flexibilidade nas operações.</td>
     </tr>
     <tr>
         <td>1.3</td>
