@@ -27,10 +27,10 @@
 
 # Autores
 
-* Matheus Veiga Bacetic Joaquim
 * Alexandre Eiji Tomimura Carvalho
-* Luiz Eduardo Bacha dos Santos
 * João Pedro Pioltini de Oliveira
+* Luiz Eduardo Bacha dos Santos
+* Matheus Veiga Bacetic Joaquim
 
 # Descrição do Projeto
 
