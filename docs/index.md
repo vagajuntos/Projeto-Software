@@ -102,16 +102,16 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
 <table>
    <tr>
       <th>Funcionais/Não Funcionais</th>
-         <td>Central de controle</td>
-         <td>Sistema de navegação</td>
-         <td>Gerenciamento de Comunicaçao</td>
-         <td>Banco de dados e auditoria</td>
-         <td>Sistema de embarcados e segurança</td>
-      </tr>
       <th>Arquitetura deficiente</th>
       <th>Problemas de segurança</th>
       <th>Gerenciamento de banco de dados</th>
       <th>Sistemas operacionais e concorrências</th>
+      <td>Central de controle</td>
+         <td>Sistema de navegação</td>
+         <td>Gerenciamento de Comunicaçao</td>
+         <td>Banco de dados e auditoria</td>
+         <td>Sistema de embarcados e segurança</td>
+         </tr>
    
  
 </table>
