@@ -70,7 +70,7 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
     <tr>
         <td>1.3</td>
         <td>- Dashboard em tempo real com telemetria.</td>
-        <td>Um painel que exibe dados de telemetria dos drones em tempo real, garantindo que todas as informações importantes estejam sempre à mão.</td>
+        <td>Um painel que exibe dados de telemetria dos drones em tempo real, garantindo todas as informações importantes.</td>
     </tr>
     <tr>
         <td>2</td>
