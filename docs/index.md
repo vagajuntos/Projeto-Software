@@ -140,7 +140,7 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
     <tr>
         <td>5.2</td>
         <td>- Monitoramento de processos do SO embarcado para evitar falhas.</td>
-        <td>Monitoramento contínuo dos processos do sistema operacional dos drones, para prever e evitar falhas, garantindo uma operação estável.</td>
+        <td>Monitoramento dos processos do sistema operacional dos drones, para prever e evitar falhas, garantindo uma operação estável.</td>
     </tr>
 </table>
 
