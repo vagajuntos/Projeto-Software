@@ -148,21 +148,77 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
 
 ## **Requisitos Não Funcionais**
 
-1. **Arquitetura Deficiente**  
-   - O sistema deve ter baixa latência e não sofrer interrupções de comunicação durante missões críticas.  
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Referência</th>
+        <th>Descrição</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td><strong>Arquitetura Deficiente</strong></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>1.1</td>
+        <td>- O sistema deve ter baixa latência e não sofrer interrupções de comunicação durante missões críticas.</td>
+        <td>O sistema deve garantir comunicação contínua e rápida durante missões críticas, evitando qualquer tipo de atraso ou interrupção.</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><strong>Problemas de Segurança</strong></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>2.1</td>
+        <td>- Implementação de um modelo robusto de autenticação e criptografia para evitar invasões e tomada de controle não autorizada.</td>
+        <td>Deve ser implementado um modelo de segurança robusto que inclui autenticação forte e criptografia para proteger contra acessos não autorizados.</td>
+    </tr>
+    <tr>
+        <td>2.2</td>
+        <td>- O armazenamento de logs de auditoria deve ser imutável e altamente disponível.</td>
+        <td>Os logs de auditoria devem ser armazenados de forma que não possam ser alterados e devem estar disponíveis a qualquer momento para consulta.</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><strong>Gerenciamento de Banco de Dados</strong></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>3.1</td>
+        <td>- O sistema deve garantir a integridade e a sincronização dos dados dos drones em tempo real.</td>
+        <td>O sistema deve assegurar que os dados dos drones sejam precisos e sincronizados em tempo real para uma operação eficiente.</td>
+    </tr>
+    <tr>
+        <td>3.2</td>
+        <td>- O histórico de missões precisa ser armazenado para auditorias e análise preditiva.</td>
+        <td>O histórico das missões dos drones deve ser registrado para fins de auditoria e para realizar análises preditivas.</td>
+    </tr>
+    <tr>
+        <td>3.3</td>
+        <td>- Banco de dados distribuído e replicado para garantir a continuidade da operação.</td>
+        <td>Deve ser utilizado um banco de dados distribuído e replicado para assegurar a continuidade das operações mesmo em caso de falhas.</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td><strong>Sistemas Operacionais e Concorrência</strong></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>4.1</td>
+        <td>- Os drones operam em um sistema operacional embarcado que precisa gerenciar múltiplas threads de sensores, navegação e IA.</td>
+        <td>O sistema operacional dos drones deve ser capaz de gerenciar várias threads simultâneas para sensores, navegação e inteligência artificial.</td>
+    </tr>
+    <tr>
+        <td>4.2</td>
+        <td>- O sistema deve ser capaz de priorizar processos conforme o status crítico da missão.</td>
+        <td>O sistema deve ter a capacidade de priorizar processos dependendo da criticidade de cada missão, garantindo que tarefas essenciais tenham prioridade.</td>
+    </tr>
+</table>  
 
-2. **Problemas de Segurança**  
-   - Implementação de um modelo robusto de autenticação e criptografia para evitar invasões e tomada de controle não autorizada.  
-   - O armazenamento de logs de auditoria deve ser imutável e altamente disponível.  
+---
 
-3. **Gerenciamento de Banco de Dados**  
-   - O sistema deve garantir a integridade e a sincronização dos dados dos drones em tempo real.  
-   - O histórico de missões precisa ser armazenado para auditorias e análise preditiva.  
-   - Banco de dados distribuído e replicado para garantir a continuidade da operação.  
-
-4. **Sistemas Operacionais e Concorrência**  
-   - Os drones operam em um sistema operacional embarcado que precisa gerenciar múltiplas threads de sensores, navegação e IA.  
-   - O sistema deve ser capaz de priorizar processos conforme o status crítico da missão.  
+## **Relacionamento Funcionais-Não Funcionais**
 
 <table>
    <tr>
