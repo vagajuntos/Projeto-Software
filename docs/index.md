@@ -114,27 +114,40 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
       <td>0</td>
       <td>1</td>
       <td>0</td>
-      </tr>
+   </tr>
 
-        <tr>
-         <td>Sistema de navegação</td>
-      </tr>
+   <tr>
+      <td>Sistema de navegação</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+   </tr>
       
-      <tr>
-         <td>Gerenciamento de Comunicaçao</td>
-      </tr>
+   <tr>
+      <td>Gerenciamento de Comunicaçao</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>     
+   </tr>
       
-      <tr>  
-         <td>Banco de dados e auditoria</td>
-      </tr>
+   <tr>  
+      <td>Banco de dados e auditoria</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+   </tr>
       
-      <tr>   
-         <td>Sistema de embarcados e segurança</td>
-      </tr>
-         
-         
+   <tr>   
+      <td>Sistema de embarcados e segurança</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+   </tr>
    
- 
 </table>
 
 # Diagrama de Atividades
