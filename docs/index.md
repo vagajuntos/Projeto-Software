@@ -60,17 +60,17 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
     <tr>
         <td>1.1</td>
         <td>- Interface para gerenciamento de frotas de drones.</td>
-        <td>Interface que permite gerenciar a frota de drones, possibilitando a visualização e controle dos mesmos.</td>
+        <td>Uma interface que permite gerenciar a frota de drones, proporcionando uma visualização clara e o controle dos mesmos.</td>
     </tr>
     <tr>
         <td>1.2</td>
         <td>- Controle remoto e autônomo dos drones.</td>
-        <td>Permite controlar os drones tanto manualmente quanto de forma autônoma.</td>
+        <td>Permite controlar os drones tanto manualmente quanto de forma autônoma, oferecendo flexibilidade nas operações.</td>
     </tr>
     <tr>
         <td>1.3</td>
         <td>- Dashboard em tempo real com telemetria.</td>
-        <td>Painel que exibe dados de telemetria dos drones em tempo real.</td>
+        <td>Um painel que exibe dados de telemetria dos drones em tempo real, garantindo que todas as informações importantes estejam sempre à mão.</td>
     </tr>
     <tr>
         <td>2</td>
@@ -80,17 +80,17 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
     <tr>
         <td>2.1</td>
         <td>- Sensoriamento do ambiente via LIDAR, câmeras e GPS.</td>
-        <td>Utiliza LIDAR, câmeras e GPS para coletar dados do ambiente e orientar os drones.</td>
+        <td>Utiliza LIDAR, câmeras e GPS para coletar dados do ambiente e orientar os drones de maneira precisa.</td>
     </tr>
     <tr>
         <td>2.2</td>
         <td>- Detecção e evasão de ameaças em tempo real.</td>
-        <td>Detecta ameaças e realiza manobras evasivas em tempo real para evitar colisões e outros perigos.</td>
+        <td>Detecta ameaças e realiza manobras evasivas em tempo real para evitar colisões e outros perigos, mantendo a segurança dos drones.</td>
     </tr>
     <tr>
         <td>2.3</td>
         <td>- Operação autônoma baseada em redes neurais.</td>
-        <td>Utiliza inteligência artificial baseada em redes neurais para operar os drones de forma autônoma, imitando o funcionamento do cérebro.</td>
+        <td>Utiliza inteligência artificial baseada em redes neurais para operar os drones de forma autônoma, imitando o funcionamento do cérebro humano.</td>
     </tr>
     <tr>
         <td>3</td>
@@ -100,12 +100,12 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
     <tr>
         <td>3.1</td>
         <td>- Protocolos para comunicação segura e em tempo real com os drones.</td>
-        <td>Protocolos que garantem comunicação segura e em tempo real entre os drones e a central.</td>
+        <td>Protocolos que garantem comunicação segura e em tempo real entre os drones e a central de controle.</td>
     </tr>
     <tr>
         <td>3.2</td>
         <td>- Mecanismos de fallback para evitar perda de conexão.</td>
-        <td>Estratégias para manter a comunicação estável e evitar a perda de conexão com a central.</td>
+        <td>Estratégias para manter a comunicação estável e evitar a perda de conexão com a central, garantindo uma operação contínua.</td>
     </tr>
     <tr>
         <td>4</td>
@@ -115,17 +115,17 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
     <tr>
         <td>4.1</td>
         <td>- Logs de missões realizadas e eventos críticos.</td>
-        <td>Registro detalhado das missões e eventos críticos ocorridos durante a operação dos drones.</td>
+        <td>Registro detalhado das missões e eventos críticos ocorridos durante a operação dos drones, para consulta e análise futura.</td>
     </tr>
     <tr>
         <td>4.2</td>
         <td>- Criptografia de ponta e assinaturas digitais.</td>
-        <td>Utilização de criptografia avançada e assinaturas digitais para garantir a segurança dos dados.</td>
+        <td>Utilização de criptografia avançada e assinaturas digitais para garantir que os dados sejam seguros e autênticos.</td>
     </tr>
     <tr>
         <td>4.3</td>
         <td>- Banco de dados NoSQL distribuído para dados em tempo real.</td>
-        <td>Sistema de banco de dados distribuído que permite atualizações e acessos em tempo real.</td>
+        <td>Sistema de banco de dados distribuído que permite atualizações e acessos em tempo real, garantindo eficiência e rapidez.</td>
     </tr>
     <tr>
         <td>5</td>
@@ -135,15 +135,15 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
     <tr>
         <td>5.1</td>
         <td>- Autenticação de operadores via biometria e autenticação multifator.</td>
-        <td>Autenticação dos operadores utilizando biometria e múltiplos fatores de segurança.</td>
+        <td>Autenticação dos operadores utilizando biometria e múltiplos fatores de segurança, para garantir que apenas pessoas autorizadas tenham acesso.</td>
     </tr>
     <tr>
         <td>5.2</td>
         <td>- Monitoramento de processos do SO embarcado para evitar falhas.</td>
-        <td>Monitoramento contínuo dos processos do sistema operacional dos drones para prever e evitar falhas.</td>
+        <td>Monitoramento contínuo dos processos do sistema operacional dos drones, para prever e evitar falhas, garantindo uma operação estável.</td>
     </tr>
 </table>
-    
+
 ---
 
 ## **Requisitos Não Funcionais**
@@ -214,61 +214,6 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
         <td>- O sistema deve ser capaz de priorizar processos conforme o status crítico da missão.</td>
         <td>O sistema deve ter a capacidade de priorizar processos dependendo da criticidade de cada missão, garantindo que tarefas essenciais tenham prioridade.</td>
     </tr>
-</table>  
-
----
-
-## **Relacionamento Funcionais-Não Funcionais**
-
-<table>
-   <tr>
-      <th>Funcionais/Não Funcionais</th>
-      <th>Arquitetura deficiente</th>
-      <th>Problemas de segurança</th>
-      <th>Gerenciamento de banco de dados</th>
-      <th>Sistemas operacionais e concorrências</th>
-      </tr>
-   
-   <tr>
-      <td>Central de controle</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-   </tr>
-
-   <tr>
-      <td>Sistema de navegação</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-   </tr>
-      
-   <tr>
-      <td>Gerenciamento de Comunicaçao</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>     
-   </tr>
-      
-   <tr>  
-      <td>Banco de dados e auditoria</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-   </tr>
-      
-   <tr>   
-      <td>Sistema de embarcados e segurança</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-   </tr>
-   
 </table>
 
 # Diagrama de Atividades
