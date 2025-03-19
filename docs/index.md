@@ -46,38 +46,103 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
 
 ## **Requisitos Funcionais**
 
-1. **Central de Controle**  
-   - Interface para gerenciamento de frotas de drones.  
-   - Controle remoto e autônomo dos drones.  
-   - Dashboard em tempo real com telemetria.  
-
-   A central de controle é responsável por atribuir tarefas e pelo controle manual e autônomo dos drones, além da coleta de dados em tempo real.
-
-2. **Sistema de Navegação Inteligente**  
-   - Sensoriamento do ambiente via LIDAR, câmeras e GPS.  
-   - Detecção e evasão de ameaças em tempo real.  
-   - Operação autônoma baseada em redes neurais.  
-
-   Direcionamento dos drones através do mapeamento do ambiente via GPS e câmeras para evitar colisões e detectar possíveis ameaças. O drone também terá uma operação autônoma, através de uma IA que imita o funcionamento do cérebro.
-
-3. **Gerenciamento de Comunicação**  
-   - Protocolos para comunicação segura e em tempo real com os drones.  
-   - Mecanismos de fallback para evitar perda de conexão.  
-
-   O drone deve coletar os dados e se comunicar em tempo real e de maneira segura com a central e com outros drones, além de possuir uma estratégia para lidar com a perda de conexão com a central.
-
-4. **Banco de Dados e Auditoria**  
-   - Logs de missões realizadas e eventos críticos.  
-   - Criptografia de ponta e assinaturas digitais.  
-   - Banco de dados NoSQL distribuído para dados em tempo real.  
-
-   Drones devem coletar os dados sobre a missão e armazená-los em um banco de dados. O sistema deve incluir métodos de segurança que protejam a comunicação e a integridade dos dados, além de utilizar um banco de dados que permita atualização em tempo real.
-
-5. **Sistemas Embarcados e Segurança**  
-   - Autenticação de operadores via biometria e autenticação multifator.  
-   - Monitoramento de processos do SO embarcado para evitar falhas.  
-
-   Implementação de autenticação dupla para maior segurança, utilizando biometria e autenticação multifatorial. Além disso, o sistema contará com monitoramento contínuo dos processos do SO para prever e evitar possíveis falhas.
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Referência</th>
+        <th>Descrição</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td><strong>Central de Controle</strong></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>1.1</td>
+        <td>- Interface para gerenciamento de frotas de drones.</td>
+        <td>Interface que permite gerenciar a frota de drones, possibilitando a visualização e controle dos mesmos.</td>
+    </tr>
+    <tr>
+        <td>1.2</td>
+        <td>- Controle remoto e autônomo dos drones.</td>
+        <td>Permite controlar os drones tanto manualmente quanto de forma autônoma.</td>
+    </tr>
+    <tr>
+        <td>1.3</td>
+        <td>- Dashboard em tempo real com telemetria.</td>
+        <td>Painel que exibe dados de telemetria dos drones em tempo real.</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><strong>Sistema de Navegação Inteligente</strong></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>2.1</td>
+        <td>- Sensoriamento do ambiente via LIDAR, câmeras e GPS.</td>
+        <td>Utiliza LIDAR, câmeras e GPS para coletar dados do ambiente e orientar os drones.</td>
+    </tr>
+    <tr>
+        <td>2.2</td>
+        <td>- Detecção e evasão de ameaças em tempo real.</td>
+        <td>Detecta ameaças e realiza manobras evasivas em tempo real para evitar colisões e outros perigos.</td>
+    </tr>
+    <tr>
+        <td>2.3</td>
+        <td>- Operação autônoma baseada em redes neurais.</td>
+        <td>Utiliza inteligência artificial baseada em redes neurais para operar os drones de forma autônoma, imitando o funcionamento do cérebro.</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><strong>Gerenciamento de Comunicação</strong></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>3.1</td>
+        <td>- Protocolos para comunicação segura e em tempo real com os drones.</td>
+        <td>Protocolos que garantem comunicação segura e em tempo real entre os drones e a central.</td>
+    </tr>
+    <tr>
+        <td>3.2</td>
+        <td>- Mecanismos de fallback para evitar perda de conexão.</td>
+        <td>Estratégias para manter a comunicação estável e evitar a perda de conexão com a central.</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td><strong>Banco de Dados e Auditoria</strong></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>4.1</td>
+        <td>- Logs de missões realizadas e eventos críticos.</td>
+        <td>Registro detalhado das missões e eventos críticos ocorridos durante a operação dos drones.</td>
+    </tr>
+    <tr>
+        <td>4.2</td>
+        <td>- Criptografia de ponta e assinaturas digitais.</td>
+        <td>Utilização de criptografia avançada e assinaturas digitais para garantir a segurança dos dados.</td>
+    </tr>
+    <tr>
+        <td>4.3</td>
+        <td>- Banco de dados NoSQL distribuído para dados em tempo real.</td>
+        <td>Sistema de banco de dados distribuído que permite atualizações e acessos em tempo real.</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td><strong>Sistemas Embarcados e Segurança</strong></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>5.1</td>
+        <td>- Autenticação de operadores via biometria e autenticação multifator.</td>
+        <td>Autenticação dos operadores utilizando biometria e múltiplos fatores de segurança.</td>
+    </tr>
+    <tr>
+        <td>5.2</td>
+        <td>- Monitoramento de processos do SO embarcado para evitar falhas.</td>
+        <td>Monitoramento contínuo dos processos do sistema operacional dos drones para prever e evitar falhas.</td>
+    </tr>
+</table>
     
 ---
 
