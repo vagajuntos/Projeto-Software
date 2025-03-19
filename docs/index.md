@@ -78,65 +78,7 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
       <td>Dashboard em tempo real com telemetria</td>
       <td>A central de controle é responsável por atribuir tarefas e pelo controle manual e autônomo dos drones, além da coleta de dados em tempo real.</td>
     </tr>
-    <tr>
-      <td>2</td>
-      <td>Sistema de Navegação Inteligente</td>
-      <td>2.1</td>
-      <td>Sensoriamento do ambiente via LIDAR, câmeras e GPS</td>
-      <td>Direcionamento dos drones através do mapeamento do ambiente via GPS e câmeras para evitar colisões e detectar possíveis ameaças.</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Sistema de Navegação Inteligente</td>
-      <td>2.2</td>
-      <td>Detecção e evasão de ameaças em tempo real</td>
-      <td>O drone utiliza sensores e IA para identificar e desviar de ameaças automaticamente.</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Gerenciamento de Comunicação</td>
-      <td>3.1</td>
-      <td>Protocolos para comunicação segura e em tempo real</td>
-      <td>O drone deve coletar os dados e se comunicar de maneira segura com a central e outros drones.</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Gerenciamento de Comunicação</td>
-      <td>3.2</td>
-      <td>Mecanismos de fallback para evitar perda de conexão</td>
-      <td>O sistema possui estratégias para manter a comunicação mesmo em caso de falha na rede.</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Banco de Dados e Auditoria</td>
-      <td>4.1</td>
-      <td>Logs de missões realizadas e eventos críticos</td>
-      <td>Drones armazenam logs de missões para auditoria e análise posterior.</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Banco de Dados e Auditoria</td>
-      <td>4.2</td>
-      <td>Criptografia de ponta e assinaturas digitais</td>
-      <td>Os dados armazenados possuem criptografia para garantir segurança e integridade.</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Sistemas Embarcados e Segurança</td>
-      <td>5.1</td>
-      <td>Autenticação de operadores via biometria e multifator</td>
-      <td>O acesso ao sistema requer autenticação dupla para maior segurança.</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Sistemas Embarcados e Segurança</td>
-      <td>5.2</td>
-      <td>Monitoramento dos processos do SO embarcado</td>
-      <td>O sistema operacional é monitorado para evitar falhas e garantir operação contínua.</td>
-    </tr>
-  </tbody>
-</table>
-
+    
 ---
 
 ## **Requisitos Não Funcionais**
