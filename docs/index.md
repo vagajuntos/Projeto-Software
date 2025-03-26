@@ -217,12 +217,27 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
 </table>
 
 # Diagrama de Atividades
-<table>
-    <tr>
-        <td><img src="diagrama.jpg" width="572" height="857"></td>
-    </tr>
-</table>
-*&lt;Diagrama para visualizer as pessoas das áreas de negócios e de desenvolvimento de uma organização para entender o processo e comportamento.&gt;*
+```mermaid
+graph TD
+    A[Autenticação] -->|Sim| B[Permissão autorizada]
+    A -->|Não| C[Permissão negada]
+    C --> D{Resta tentativas?}
+    D -->|Sim| A
+    D -->|Não| E[Alerta de segurança]
+
+    B --> F[Atribuir tarefa ao drone]
+    F --> G[Drone executa a tarefa]
+    G --> H{Detectou Ameaça?}
+    H -->|Sim| I[Drone desvia]
+    I --> J[Troca de dados com o sistema]
+    J --> K[Retorno do drone]
+
+    G --> L{Tarefa foi realizada?}
+    L -->|Sim| K
+    L -->|Não| M{Missão ainda é possível?}
+    M -->|Sim| G
+    M -->|Não| N[Abortar missão]
+````
 
 # Diagrama de Casos de Uso
 
