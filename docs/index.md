@@ -219,11 +219,13 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
 # Diagrama de Atividades
 ```mermaid
 graph TD
-    A[Autenticação] -->|Sim| B[Permissão autorizada]
+    start((Início)) --> A[Autenticação]
+    A -->|Sim| B[Permissão autorizada]
     A -->|Não| C[Permissão negada]
     C --> D{Resta tentativas?}
     D -->|Sim| A
     D -->|Não| E[Alerta de segurança]
+    E --> end1((Fim))
 
     B --> F[Atribuir tarefa ao drone]
     F --> G[Drone executa a tarefa]
@@ -231,12 +233,14 @@ graph TD
     H -->|Sim| I[Drone desvia]
     I --> J[Troca de dados com o sistema]
     J --> K[Retorno do drone]
+    K --> end2((Fim))
 
     G --> L{Tarefa foi realizada?}
     L -->|Sim| K
     L -->|Não| M{Missão ainda é possível?}
     M -->|Sim| G
     M -->|Não| N[Abortar missão]
+    N --> end3((Fim))
 ````
 
 # Diagrama de Casos de Uso
