@@ -1,3 +1,7 @@
+# Diagrama de Casos de Uso - Projeto de Drone
+
+O diagrama abaixo ilustra os casos de uso e atores envolvidos no projeto de drone.
+
 ```mermaid
 ---
 title: Diagrama de Casos de Uso - Projeto de Drone
@@ -33,5 +37,5 @@ note right of Sistema_de_Monitoramento
 end note
 
 note left of Usuario_Final
-    Utiliza os resamenteultados das misses.
+    Utiliza os resultados das misses.
 end note
