@@ -216,34 +216,46 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
     </tr>
 </table>
 
-# Diagrama de Atividades
-Initial Node --> Planejar Missão
-Planejar Missão --> Autenticar Operador
-Autenticar Operador --> [Decisão: Autenticação bem-sucedida?]
-    Sim --> Atribuir Tarefa ao Drone
-    Não --> Finalizar Processo (Erro de Autenticação)
+# Diagrama de Atividades - Sistema Falcão Sombrio
 
-Atribuir Tarefa ao Drone --> Executar Missão
-Executar Missão --> [Decisão: Detectar Ameaça?]
-    Sim --> Evitar Ameaça
-    Não --> Continuar Missão
+```mermaid
+graph TD
+    %% Nós Principais
+    A((Início)) --> B[Autenticar Operador]
+    B -->|Sucesso| C[Planejar Missão]
+    B -->|Falha| D{Restam Tentativas?}
+    D -->|Sim| B
+    D -->|Não| E[Alerta de Segurança]
+    E --> F((Fim))
 
-Evitar Ameaça --> Comunicar com Sistema de Monitoramento
-Continuar Missão --> Comunicar com Sistema de Monitoramento
+    C --> G[Atribuir Missão ao Drone]
+    G --> H[Inicializar Drone]
+    H --> I[Executar Missão]
 
-Comunicar com Sistema de Monitoramento --> [Decisão: Missão Concluída?]
-    Sim --> Retornar ao Ponto Base
-    Não --> Continuar Missão
+    %% Fluxo de Execução da Missão
+    I --> J{Detectou Ameaça?}
+    J -->|Sim| K[Desviar de Ameaça]
+    K --> L[Continuar Missão]
+    J -->|Não| L
 
-Retornar ao Ponto Base --> Registrar Logs de Missão
-Registrar Logs de Missão --> Final Node
+    L --> M{Missão Concluída?}
+    M -->|Sim| N[Retornar à Base]
+    M -->|Não| O{Falha Crítica?}
+    O -->|Sim| P[Abortar Missão]
+    O -->|Não| I
 
-Executar Missão --> [Decisão: Abortar Missão?]
-    Sim --> Abortar Missão
-    Não --> Continuar Missão
+    %% Comunicação e Dados
+    I --> Q[Trocar Dados em Tempo Real]
+    Q --> R[Sistema de Monitoramento]
+    R --> S[Armazenar Logs de Auditoria]
+    S --> T[Replicar Dados Distribuídos]
 
-Abortar Missão --> Registrar Logs de Missão
-Registrar Logs de Missão --> Final Node
+    %% Finalizações
+    N --> U[Enviar Relatório Final]
+    P --> V[Registrar Falha no Log]
+    U --> F
+    V --> F
+``` 
 
 # Diagrama de Casos de Uso
 
