@@ -217,31 +217,33 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
 </table>
 
 # Diagrama de Atividades
-```mermaid
-graph TD
-    start((Início)) --> A[Autenticação]
-    A -->|Sim| B[Permissão autorizada]
-    A -->|Não| C[Permissão negada]
-    C --> D{Resta tentativas?}
-    D -->|Sim| A
-    D -->|Não| E[Alerta de segurança]
-    E --> end1((Fim))
+Initial Node --> Planejar Missão
+Planejar Missão --> Autenticar Operador
+Autenticar Operador --> [Decisão: Autenticação bem-sucedida?]
+    Sim --> Atribuir Tarefa ao Drone
+    Não --> Finalizar Processo (Erro de Autenticação)
 
-    B --> F[Atribuir tarefa ao drone]
-    F --> G[Drone executa a tarefa]
-    G --> H{Detectou Ameaça?}
-    H -->|Sim| I[Drone desvia]
-    I --> J[Troca de dados com o sistema]
-    J --> K[Retorno do drone]
-    K --> end2((Fim))
+Atribuir Tarefa ao Drone --> Executar Missão
+Executar Missão --> [Decisão: Detectar Ameaça?]
+    Sim --> Evitar Ameaça
+    Não --> Continuar Missão
 
-    G --> L{Tarefa foi realizada?}
-    L -->|Sim| K
-    L -->|Não| M{Missão ainda é possível?}
-    M -->|Sim| G
-    M -->|Não| N[Abortar missão]
-    N --> end3((Fim))
-````
+Evitar Ameaça --> Comunicar com Sistema de Monitoramento
+Continuar Missão --> Comunicar com Sistema de Monitoramento
+
+Comunicar com Sistema de Monitoramento --> [Decisão: Missão Concluída?]
+    Sim --> Retornar ao Ponto Base
+    Não --> Continuar Missão
+
+Retornar ao Ponto Base --> Registrar Logs de Missão
+Registrar Logs de Missão --> Final Node
+
+Executar Missão --> [Decisão: Abortar Missão?]
+    Sim --> Abortar Missão
+    Não --> Continuar Missão
+
+Abortar Missão --> Registrar Logs de Missão
+Registrar Logs de Missão --> Final Node
 
 # Diagrama de Casos de Uso
 
