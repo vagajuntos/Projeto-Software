@@ -25,4 +25,3 @@ usecaseDiagram
     
     Estacao --> (Monitorar Status em Tempo Real)
     Estacao --> (Enviar Comandos)
-
