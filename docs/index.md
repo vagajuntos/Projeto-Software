@@ -217,7 +217,11 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
 </table>
 
 # Diagrama de Atividades
-
+<table>
+    <tr>
+        <td><img src="C:\Users\10425296\Pictures\diagrama.jpg" width="500" height="600"></td>
+    </tr>
+</table>
 *&lt;Diagrama para visualizer as pessoas das áreas de negócios e de desenvolvimento de uma organização para entender o processo e comportamento.&gt;*
 
 # Diagrama de Casos de Uso
