@@ -228,7 +228,8 @@ graph TD
         Z -->|Não| AC[tenta novamente] --> Y
         class Y,Z,AA,AB,AC database
     end
-
+```
+```mermaid
 graph TD
     classDef default fill:#f4f4f4, stroke:#333, stroke-width:2px
     classDef critical fill:#ffe6e6, stroke:#990000
@@ -243,7 +244,8 @@ graph TD
         T -->|Não| X[Abortar missão] --> W
         class O,P,Q,R,S,T,U,V,X critical
     end
-
+```
+```mermaid
 graph TD
     classDef default fill:#f4f4f4, stroke:#333, stroke-width:2px
     classDef database fill:#e6f2ff, stroke:#003366
@@ -256,7 +258,8 @@ graph TD
         M --> N
         class J,K,L,M,N database
     end
-
+```
+```mermaid
 graph TD
     classDef default fill:#f4f4f4, stroke:#333, stroke-width:2px
     classDef secure fill:#e6ffe6, stroke:#006600
