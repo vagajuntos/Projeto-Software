@@ -218,6 +218,7 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
 
 # Diagrama de Atividades - Sistema Falcão Sombrio
 
+```
 graph TD
     %% Nós Principais
     A((Início)) --> B[Autenticar Operador]
@@ -262,7 +263,7 @@ graph TD
     AA --> AC[Registrar Falha no Log Imutável]
     AB --> F
     AC --> F
-
+```
 # Diagrama de Casos de Uso
 
 *&lt;Diagrama para visualizar o comportamento dos atores&gt;*
