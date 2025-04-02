@@ -440,9 +440,62 @@ graph TD
 
 
 # Diagrama de Sequência
+```mermaid
+sequenceDiagram
+    participant Militar as Operador Militar
+    participant SistemaSeguranca as Sistema Embarcado de Segurança
+    participant CentralControle as Central de Controle
+    participant Drone
+    participant Navegacao as Sistema de Navegação
+    participant BancoDados as Banco de Dados
 
-*&lt;Diagrama de ordem e interação dos objetos&gt;*
+    %% Autenticação e Inicialização
+    Militar->>SistemaSeguranca: Login (biometria + token)
+    activate SistemaSeguranca
+    SistemaSeguranca-->>Militar: Acesso autorizado
+    deactivate SistemaSeguranca
 
+    %% Planejamento da Missão
+    Militar->>CentralControle: Definir missão (coordenadas, prioridades)
+    activate CentralControle
+    CentralControle->>BancoDados: Registrar missão
+    activate BancoDados
+    BancoDados-->>CentralControle: Confirmação
+    deactivate BancoDados
+    CentralControle-->>Militar: Missão validada
+
+    %% Execução da Missão
+    CentralControle->>Drone: Transmitir ordens (MQTT/TLS)
+    activate Drone
+    Drone->>Navegacao: Iniciar navegação autônoma
+    activate Navegacao
+
+    %% Monitoramento em Tempo Real
+    loop Durante a missão
+        Drone->>Navegacao: Enviar telemetria (GPS, sensores)
+        Navegacao->>CentralControle: Atualizar dashboard
+        CentralControle->>BancoDados: Armazenar logs (AES-256)
+    end
+
+    %% Tratamento de Ameaças
+    alt Detecção de ameaça
+        Navegacao->>Drone: Alerta de colisão
+        Drone->>Navegacao: Calcular rota alternativa
+        Navegacao->>CentralControle: Notificar ameaça
+        CentralControle->>Militar: Alerta prioritário
+    else Sem ameaças
+        Drone->>Navegacao: Continuar trajetória
+    end
+
+    %% Conclusão da Missão
+    Drone->>CentralControle: Missão concluída
+    CentralControle->>BancoDados: Sincronizar dados (Cassandra)
+    BancoDados-->>CentralControle: Dados replicados
+    CentralControle-->>Militar: Relatório final
+    deactivate CentralControle
+    deactivate Drone
+    deactivate Navegacao
+```
 # Diagrama de Classes
 
 *&lt;Diagrama de relacionamento entre classes para os seus atributos e operações&gt;*
