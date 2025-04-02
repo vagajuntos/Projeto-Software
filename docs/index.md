@@ -277,6 +277,8 @@ graph TD
 
 # Diagrama de Casos de Uso
 
+![Diagrama de Atividades](./docs/diagrama.png)
+
 # Descrição dos Casos de Uso
 
 <table border="1">
