@@ -281,7 +281,7 @@ graph TD
 
 <table border="1">
     <tr>
-        <td collspan = 2>Sistema Falcão Sombrio</td>
+        <td collspan = "2">Sistema Falcão Sombrio</td>
     </tr>
     <tr>
         <td>Função</td>
