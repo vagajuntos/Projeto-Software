@@ -238,16 +238,6 @@ graph TD
             Z -->|Não| AC[tenta novamente] --> Y
         end
 
-        subgraph Navegação Sistema de Navegação Inteligente / Gerenciamento de Comunicação
-            O[Drone executa a tarefa] --> P{Detectou ameaça?}
-            P -->|Sim| Q[Drone desvia] --> R{Fallback?}
-            R -->|Sim| S[Troca de dados com o sistema] --> T{Missão possível?}
-            R -->|Não| U[Fallback] --> V[Retorno do drone] --> W((Fim))
-            P -->|Não| O
-            T -->|Sim| O
-            T -->|Não| X[Abortar missão] --> W
-        end
-    end
 ```
 
 ```mermaid
@@ -261,9 +251,35 @@ graph TD
     %% Título
     A[Funcionais] --> B((Início))
 
-subgraph Coluna 2
+
+    subgraph Navegação Sistema de Navegação Inteligente / Gerenciamento de Comunicação
+                O[Drone executa a tarefa] --> P{Detectou ameaça?}
+                P -->|Sim| Q[Drone desvia] --> R{Fallback?}
+                R -->|Sim| S[Troca de dados com o sistema] --> T{Missão possível?}
+                R -->|Não| U[Fallback] --> V[Retorno do drone] --> W((Fim))
+                P -->|Não| O
+                T -->|Sim| O
+                T -->|Não| X[Abortar missão] --> W
+            end
+        end
+
         direction TB
-        subgraph Central de Controle
+       
+    end
+```
+```mermaid
+graph TD
+    %% Estilo
+    classDef default fill:#f4f4f4, stroke:#333, stroke-width:2px
+    classDef critical fill:#ffe6e6, stroke:#990000
+    classDef secure fill:#e6ffe6, stroke:#006600
+    classDef database fill:#e6f2ff, stroke:#003366
+
+    %% Título
+    A[Funcionais] --> B((Início))
+
+
+subgraph Central de Controle
             J[Acesso à interface] --> K{Controle do drone}
             K --> L[Autônomo]
             K --> M[Controle remoto]
@@ -271,19 +287,30 @@ subgraph Coluna 2
             M --> N
         end
 
-        subgraph Sistemas Embarcados e Segurança
+```
+```mermaid
+graph TD
+    %% Estilo
+    classDef default fill:#f4f4f4, stroke:#333, stroke-width:2px
+    classDef critical fill:#ffe6e6, stroke:#990000
+    classDef secure fill:#e6ffe6, stroke:#006600
+    classDef database fill:#e6f2ff, stroke:#003366
+
+    %% Título
+    A[Funcionais] --> B((Início))
+
+ subgraph Sistemas Embarcados e Segurança
             C[Login] --> D{Permissão autorizada?}
             D -->|Sim| E[Logs de acesso]
             D -->|Não| F[Permissão negada] --> G{Restam tentativas?}
             G -->|Sim| H[Alerta de segurança] --> I((Fim))
             G -->|Não| C
         end
-    end
+
 ```
+*&lt;Diagrama para visualizar o comportamento dos atores&gt;*
 
 # Diagrama de Casos de Uso
-
-*&lt;Diagrama para visualizar o comportamento dos atores&gt;*
 
 # Descrição dos Casos de Uso
 
