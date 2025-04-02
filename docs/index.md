@@ -277,7 +277,7 @@ graph TD
 
 # Diagrama de Casos de Uso
 
-![Diagrama de Casos de Uso](./docs/receba.png)
+![Diagrama de Casos de Uso](receba.png)
 
 # Descrição dos Casos de Uso
 
