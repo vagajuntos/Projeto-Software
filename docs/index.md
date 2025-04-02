@@ -421,7 +421,7 @@ graph TD
         <th>Ações do Sistema</th>
     </tr>
     <tr>
-        <td>1. Operador inicia sessão no sistema</td>
+        <td>1. Militar inicia sessão no sistema</td>
         <td>2. Sistema autentica o operador</td>
     </tr>
     <tr>
