@@ -248,8 +248,20 @@ graph TD
             T -->|Não| X[Abortar missão] --> W
         end
     end
+```
 
-    subgraph Coluna 2
+```mermaid
+graph TD
+    %% Estilo
+    classDef default fill:#f4f4f4, stroke:#333, stroke-width:2px
+    classDef critical fill:#ffe6e6, stroke:#990000
+    classDef secure fill:#e6ffe6, stroke:#006600
+    classDef database fill:#e6f2ff, stroke:#003366
+
+    %% Título
+    A[Funcionais] --> B((Início))
+
+subgraph Coluna 2
         direction TB
         subgraph Central de Controle
             J[Acesso à interface] --> K{Controle do drone}
@@ -268,6 +280,7 @@ graph TD
         end
     end
 ```
+
 # Diagrama de Casos de Uso
 
 *&lt;Diagrama para visualizar o comportamento dos atores&gt;*
