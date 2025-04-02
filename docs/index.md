@@ -218,46 +218,50 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
 
 # Diagrama de Atividades - Sistema Falcão Sombrio
 
-```mermaid
 graph TD
     %% Nós Principais
     A((Início)) --> B[Autenticar Operador]
-    B -->|Sucesso| C[Planejar Missão]
+    B -->|Sucesso| C[Verificar Autenticação Multifator]
     B -->|Falha| D{Restam Tentativas?}
     D -->|Sim| B
     D -->|Não| E[Alerta de Segurança]
     E --> F((Fim))
 
-    C --> G[Atribuir Missão ao Drone]
-    G --> H[Inicializar Drone]
-    H --> I[Executar Missão]
+    C --> G[Validar Criptografia AES-256]
+    G --> H[Planejar Missão]
+    H --> I[Garantir Baixa Latência]
+    I --> J[Atribuir Missão ao Drone]
+    J --> K[Inicializar Sistema Embarcado]
+    K --> L[Gerenciar Threads de Sensores/IA]
 
-    %% Fluxo de Execução da Missão
-    I --> J{Detectou Ameaça?}
-    J -->|Sim| K[Desviar de Ameaça]
-    K --> L[Continuar Missão]
-    J -->|Não| L
+    %% Execução da Missão
+    L --> M[Executar Missão]
+    M --> N{Monitorar Concorrência}
+    N -->|Priorizar Processos| O[Verificar Integridade de Dados]
+    O --> P[Trocar Dados em Tempo Real]
+    P --> Q[Replicar BD Distribuído]
+    Q --> R{Sincronização OK?}
+    R -->|Sim| S[Armazenar Logs Imutáveis]
+    R -->|Não| T[Corrigir Sincronização]
+    T --> Q
 
-    L --> M{Missão Concluída?}
-    M -->|Sim| N[Retornar à Base]
-    M -->|Não| O{Falha Crítica?}
-    O -->|Sim| P[Abortar Missão]
-    O -->|Não| I
-
-    %% Comunicação e Dados
-    I --> Q[Trocar Dados em Tempo Real]
-    Q --> R[Sistema de Monitoramento]
-    R --> S[Armazenar Logs de Auditoria]
-    S --> T[Replicar Dados Distribuídos]
+    %% Fluxo de Ameaças
+    M --> U{Detectou Ameaça?}
+    U -->|Sim| V[Desviar de Ameaça]
+    V --> W[Continuar Missão]
+    U -->|Não| W
 
     %% Finalizações
-    N --> U[Enviar Relatório Final]
-    P --> V[Registrar Falha no Log]
-    U --> F
-    V --> F
-```
+    W --> X{Missão Concluída?}
+    X -->|Sim| Y[Retornar à Base]
+    X -->|Não| Z{Falha Crítica?}
+    Z -->|Sim| AA[Abortar Missão]
+    Z -->|Não| M
 
-![Diagrama de Atividades](//www.plantuml.com/plantuml/png/LL6zRXD14ExlAKQY0IaTFqNInB6jA1MH8XvWl3U-3BxTEMPd3GJnC2X592HNY8PsNuovkv3WgsvtzllvlZdFXcebzatUSHfGCG86uptRL_ZMW7yN67QTIadjKdfHUB5UhozMoscsK9NFZzTltxrPl5xD4D6MzFZ-UzDCMasp5TqrfmlzLDZ8YYAiQCk1AHcTDQUNg9YC5JR8Nn1wjFep1KOW219Bue3reTwBdvBLGoe-YH0vv_gRCWIj1_Ct-MmI0koGKtDwhRBfAMA6bk26EfTDzG5TxoeEFd1nLC1Y_lEau0H6ewxoOD8fRdb4B3JY7ILKwAMR2B6qRAACmB5O_R4dpevhEG-Iwc4y7jkv9AKnrAWh8yC5fZ3zhB2L_7yDd8mwvHPzI90v1PN4TuyMFRfH70IKi3_oTilPwY_bcVQfdt77ptuTyS6uTphl-vy5bnAFvNZbJQc7rcMSV-Wv-EGuo8s_ccfzFv1YO4auHL-AawdEgpjx3gmGwv_UUEWTOxTAs6PucIbbKSeda71FtPpj1AuMhnnwhImwEHnK0kKiUTozkuZJQep3t4wBSynxz_XHt5sJJORcd59ROlyN)
+    Y --> AB[Enviar Relatório Criptografado]
+    AA --> AC[Registrar Falha no Log Imutável]
+    AB --> F
+    AC --> F
 
 # Diagrama de Casos de Uso
 
