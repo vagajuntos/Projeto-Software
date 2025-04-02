@@ -279,6 +279,57 @@ graph TD
 
 # Descrição dos Casos de Uso
 
+<table border="1">
+    <tr>
+        <th>Item</th>
+        <th>Descrição</th>
+    </tr>
+    <tr>
+        <td>Função</td>
+        <td>Gerenciar a operação remota e autônoma de drones bélicos</td>
+    </tr>
+    <tr>
+        <td>Descrição</td>
+        <td>O sistema permite controle remoto e autônomo dos drones, incluindo navegação inteligente, auditoria e comunicação segura.</td>
+    </tr>
+    <tr>
+        <td>Entrada</td>
+        <td>Respostas dos drones (posição, status da missão, telemetria)</td>
+    </tr>
+    <tr>
+        <td>Fonte</td>
+        <td>Central de Controle</td>
+    </tr>
+    <tr>
+        <td>Saídas</td>
+        <td>Comandos para os drones</td>
+    </tr>
+    <tr>
+        <td>Destino</td>
+        <td>Drones em operação</td>
+    </tr>
+    <tr>
+        <td>Ação</td>
+        <td>Enviar comandos para os drones, processar dados de telemetria e ajustar estratégias em tempo real.</td>
+    </tr>
+    <tr>
+        <td>Requer</td>
+        <td>Conectividade segura e estável entre o servidor e os drones.</td>
+    </tr>
+    <tr>
+        <td>Pré-Condição</td>
+        <td>O sistema precisa estar autenticado e autorizado para enviar comandos.</td>
+    </tr>
+    <tr>
+        <td>Pós-Condição</td>
+        <td>Os drones ajustam suas trajetórias e operações conforme os comandos recebidos.</td>
+    </tr>
+    <tr>
+        <td>Efeitos colaterais</td>
+        <td>Possibilidade de falha em comunicação levando a quedas temporárias na operação.</td>
+    </tr>
+</table>
+
 *&lt;Descrição do comportamento entre os atores/resquisitos&gt;*
 
 # Diagrama de Sequência
