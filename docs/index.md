@@ -218,7 +218,7 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
 
 # Diagrama de Atividades - Sistema Falcão Sombrio
 
-```
+```mermaid
 graph TD
     %% Estilo
     classDef default fill:#f4f4f4, stroke:#333, stroke-width:2px
@@ -263,7 +263,7 @@ graph TD
         Z -->|Sim| AA[fazer criptografia] --> AB[armazenar no banco de dados]
         Z -->|Não| AC[tenta novamente] --> Y
     end
-´´´
+```
 # Diagrama de Casos de Uso
 
 *&lt;Diagrama para visualizar o comportamento dos atores&gt;*
