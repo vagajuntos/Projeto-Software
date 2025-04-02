@@ -257,35 +257,7 @@ graph TD
     V --> F
 ```
 
-@startuml
-skinparam activity {
-    BackgroundColor #EEEBDC
-    ArrowColor #564A3D
-    BorderColor #564A3D
-}
-
-start
-
-fork
-    :**Arquitetura Deficiente**;
-    :Garantir baixa latência e comunicação contínua em missões críticas;
-fork again
-    :**Problemas de Segurança**;
-    :Implementar autenticação forte e criptografia;
-    :Armazenar logs de auditoria imutáveis e disponíveis;
-fork again
-    :**Gerenciamento de Banco de Dados**;
-    :Garantir integridade e sincronização em tempo real;
-    :Armazenar histórico de missões para auditoria;
-    :Utilizar banco de dados distribuído e replicado;
-fork again
-    :**Sistemas Operacionais e Concorrência**;
-    :Gerenciar múltiplas threads (sensores, navegação, IA);
-    :Priorizar processos conforme criticidade da missão;
-join
-
-stop
-@enduml
+![Diagrama de Atividades](//www.plantuml.com/plantuml/png/LL6zRXD14ExlAKQY0IaTFqNInB6jA1MH8XvWl3U-3BxTEMPd3GJnC2X592HNY8PsNuovkv3WgsvtzllvlZdFXcebzatUSHfGCG86uptRL_ZMW7yN67QTIadjKdfHUB5UhozMoscsK9NFZzTltxrPl5xD4D6MzFZ-UzDCMasp5TqrfmlzLDZ8YYAiQCk1AHcTDQUNg9YC5JR8Nn1wjFep1KOW219Bue3reTwBdvBLGoe-YH0vv_gRCWIj1_Ct-MmI0koGKtDwhRBfAMA6bk26EfTDzG5TxoeEFd1nLC1Y_lEau0H6ewxoOD8fRdb4B3JY7ILKwAMR2B6qRAACmB5O_R4dpevhEG-Iwc4y7jkv9AKnrAWh8yC5fZ3zhB2L_7yDd8mwvHPzI90v1PN4TuyMFRfH70IKi3_oTilPwY_bcVQfdt77ptuTyS6uTphl-vy5bnAFvNZbJQc7rcMSV-Wv-EGuo8s_ccfzFv1YO4auHL-AawdEgpjx3gmGwv_UUEWTOxTAs6PucIbbKSeda71FtPpj1AuMhnnwhImwEHnK0kKiUTozkuZJQep3t4wBSynxz_XHt5sJJORcd59ROlyN)
 
 # Diagrama de Casos de Uso
 
