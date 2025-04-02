@@ -333,6 +333,112 @@ graph TD
 
 *&lt;Descrição do comportamento entre os atores/resquisitos&gt;*
 
+
+
+<table border="1">
+    <caption><em>Especificação do caso de uso OPERAR DRONE</em></caption>
+    <tr>
+        <td><strong>Nome do Caso de Uso</strong></td>
+        <td>Operar Drone</td>
+    </tr>
+    <tr>
+        <td><strong>Ator Principal</strong></td>
+        <td>Operador Remoto</td>
+    </tr>
+    <tr>
+        <td><strong>Atores Secundários</strong></td>
+        <td>Sistema de Controle, Satélite de Comunicação</td>
+    </tr>
+    <tr>
+        <td><strong>Resumo</strong></td>
+        <td>Este caso de uso descreve as etapas para controlar remotamente um drone para fins de reconhecimento ou ataque.</td>
+    </tr>
+    <tr>
+        <td><strong>Pré-condições</strong></td>
+        <td>O sistema deve estar autenticado e conectado ao drone.</td>
+    </tr>
+    <tr>
+        <td><strong>Pós-condições</strong></td>
+        <td>O drone executa a missão conforme os comandos recebidos.</td>
+    </tr>
+</table>
+
+<h3>FLUXO PRINCIPAL</h3>
+<table border="1">
+    <tr>
+        <th>Ações do Ator</th>
+        <th>Ações do Sistema</th>
+    </tr>
+    <tr>
+        <td>1. Operador inicia sessão no sistema</td>
+        <td>2. Sistema autentica o operador</td>
+    </tr>
+    <tr>
+        <td>3. Operador seleciona um drone para controle</td>
+        <td>4. Sistema estabelece conexão com o drone</td>
+    </tr>
+    <tr>
+        <td>5. Operador insere comandos de voo</td>
+        <td>6. Sistema transmite comandos para o drone</td>
+    </tr>
+    <tr>
+        <td>7. Operador monitora telemetria e ajusta trajetória</td>
+        <td>8. Sistema atualiza a posição do drone em tempo real</td>
+    </tr>
+</table>
+<table border="1">
+    <caption><em>Especificação do caso de uso OPERAR DRONE</em></caption>
+    <tr>
+        <td><strong>Nome do Caso de Uso</strong></td>
+        <td>Operar Drone</td>
+    </tr>
+    <tr>
+        <td><strong>Ator Principal</strong></td>
+        <td>Operador Remoto</td>
+    </tr>
+    <tr>
+        <td><strong>Atores Secundários</strong></td>
+        <td>Sistema de Controle, Satélite de Comunicação</td>
+    </tr>
+    <tr>
+        <td><strong>Resumo</strong></td>
+        <td>Este caso de uso descreve as etapas para controlar remotamente um drone para fins de reconhecimento ou ataque.</td>
+    </tr>
+    <tr>
+        <td><strong>Pré-condições</strong></td>
+        <td>O sistema deve estar autenticado e conectado ao drone.</td>
+    </tr>
+    <tr>
+        <td><strong>Pós-condições</strong></td>
+        <td>O drone executa a missão conforme os comandos recebidos.</td>
+    </tr>
+</table>
+
+<h3>FLUXO PRINCIPAL</h3>
+<table border="1">
+    <tr>
+        <th>Ações do Ator</th>
+        <th>Ações do Sistema</th>
+    </tr>
+    <tr>
+        <td>1. Operador inicia sessão no sistema</td>
+        <td>2. Sistema autentica o operador</td>
+    </tr>
+    <tr>
+        <td>3. Operador seleciona um drone para controle</td>
+        <td>4. Sistema estabelece conexão com o drone</td>
+    </tr>
+    <tr>
+        <td>5. Operador insere comandos de voo</td>
+        <td>6. Sistema transmite comandos para o drone</td>
+    </tr>
+    <tr>
+        <td>7. Operador monitora telemetria e ajusta trajetória</td>
+        <td>8. Sistema atualiza a posição do drone em tempo real</td>
+    </tr>
+</table>
+
+
 # Diagrama de Sequência
 
 *&lt;Diagrama de ordem e interação dos objetos&gt;*
