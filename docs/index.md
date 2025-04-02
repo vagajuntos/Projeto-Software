@@ -277,7 +277,7 @@ graph TD
 
 # Diagrama de Casos de Uso
 
-![Diagrama de Casos de Uso](./docs/Captura de tela 2025-04-02 103806.png)
+![Diagrama de Casos de Uso](./docs/receba.png)
 
 # Descrição dos Casos de Uso
 
