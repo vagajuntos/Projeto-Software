@@ -343,23 +343,23 @@ graph TD
     </tr>
     <tr>
         <td><strong>Ator Principal</strong></td>
-        <td>Operador Remoto</td>
+        <td>Militar</td>
     </tr>
     <tr>
         <td><strong>Atores Secundários</strong></td>
-        <td>Sistema de Controle, Satélite de Comunicação</td>
+        <td>Drone</td></td>
     </tr>
     <tr>
         <td><strong>Resumo</strong></td>
-        <td>Este caso de uso descreve as etapas para controlar remotamente um drone para fins de reconhecimento ou ataque.</td>
+        <td>Este caso de uso descreve as etapas para controlar remotamente um drone para reconhecimento ou ataque.</td>
     </tr>
     <tr>
         <td><strong>Pré-condições</strong></td>
-        <td>O sistema deve estar autenticado e conectado ao drone.</td>
+        <td>Autentificação validada com sucesso</td>
     </tr>
     <tr>
         <td><strong>Pós-condições</strong></td>
-        <td>O drone executa a missão conforme os comandos recebidos.</td>
+        <td>O drone executa a missão e salva os logs</td>
     </tr>
 </table>
 
