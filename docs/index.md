@@ -255,7 +255,37 @@ graph TD
     P --> V[Registrar Falha no Log]
     U --> F
     V --> F
-``` 
+```
+
+@startuml
+skinparam activity {
+    BackgroundColor #EEEBDC
+    ArrowColor #564A3D
+    BorderColor #564A3D
+}
+
+start
+
+fork
+    :**Arquitetura Deficiente**;
+    :Garantir baixa latência e comunicação contínua em missões críticas;
+fork again
+    :**Problemas de Segurança**;
+    :Implementar autenticação forte e criptografia;
+    :Armazenar logs de auditoria imutáveis e disponíveis;
+fork again
+    :**Gerenciamento de Banco de Dados**;
+    :Garantir integridade e sincronização em tempo real;
+    :Armazenar histórico de missões para auditoria;
+    :Utilizar banco de dados distribuído e replicado;
+fork again
+    :**Sistemas Operacionais e Concorrência**;
+    :Gerenciar múltiplas threads (sensores, navegação, IA);
+    :Priorizar processos conforme criticidade da missão;
+join
+
+stop
+@enduml
 
 # Diagrama de Casos de Uso
 
