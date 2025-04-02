@@ -220,49 +220,49 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
 
 ```
 graph TD
-    %% Nós Principais
-    A((Início)) --> B[Autenticar Operador]
-    B -->|Sucesso| C[Verificar Autenticação Multifator]
-    B -->|Falha| D{Restam Tentativas?}
-    D -->|Sim| B
-    D -->|Não| E[Alerta de Segurança]
-    E --> F((Fim))
+    %% Estilo
+    classDef default fill:#f4f4f4, stroke:#333, stroke-width:2px
+    classDef critical fill:#ffe6e6, stroke:#990000
+    classDef secure fill:#e6ffe6, stroke:#006600
+    classDef database fill:#e6f2ff, stroke:#003366
 
-    C --> G[Validar Criptografia AES-256]
-    G --> H[Planejar Missão]
-    H --> I[Garantir Baixa Latência]
-    I --> J[Atribuir Missão ao Drone]
-    J --> K[Inicializar Sistema Embarcado]
-    K --> L[Gerenciar Threads de Sensores/IA]
+    %% Título
+    A[Funcionais] --> B((Início))
 
-    %% Execução da Missão
-    L --> M[Executar Missão]
-    M --> N{Monitorar Concorrência}
-    N -->|Priorizar Processos| O[Verificar Integridade de Dados]
-    O --> P[Trocar Dados em Tempo Real]
-    P --> Q[Replicar BD Distribuído]
-    Q --> R{Sincronização OK?}
-    R -->|Sim| S[Armazenar Logs Imutáveis]
-    R -->|Não| T[Corrigir Sincronização]
-    T --> Q
+    %% Subgrupos
+    subgraph Sistemas Embarcados e Segurança
+        C[Login] --> D{Permissão autorizada?}
+        D -->|Sim| E[Logs de acesso]
+        D -->|Não| F[Permissão negada] --> G{Restam tentativas?}
+        G -->|Sim| H[Alerta de segurança] --> I((Fim))
+        G -->|Não| C
+    end
 
-    %% Fluxo de Ameaças
-    M --> U{Detectou Ameaça?}
-    U -->|Sim| V[Desviar de Ameaça]
-    V --> W[Continuar Missão]
-    U -->|Não| W
+    subgraph Central de Controle
+        J[Acesso a interface] --> K{Controle do drone}
+        K --> L[Autônomo]
+        K --> M[Controle remoto]
+        L --> N[Dashboard com telemetria]
+        M --> N
+    end
 
-    %% Finalizações
-    W --> X{Missão Concluída?}
-    X -->|Sim| Y[Retornar à Base]
-    X -->|Não| Z{Falha Crítica?}
-    Z -->|Sim| AA[Abortar Missão]
-    Z -->|Não| M
+    %% Fluxo de Navegação
+    subgraph Navegação Sistema de Navegação Inteligente / Gerenciamento de Comunicação
+        O[Drone executa a tarefa] --> P{Detectou ameaça?}
+        P -->|Sim| Q[Drone desvia] --> R{Fallback?}
+        R -->|Sim| S[Troca de dados com o sistema] --> T{Missão possível?}
+        R -->|Não| U[Fallback] --> V[Retorno do drone] --> W((Fim))
+        P -->|Não| O
+        T -->|Sim| O
+        T -->|Não| X[Abortar missão] --> W
+    end
 
-    Y --> AB[Enviar Relatório Criptografado]
-    AA --> AC[Registrar Falha no Log Imutável]
-    AB --> F
-    AC --> F
+    %% Banco de Dados e Auditoria
+    subgraph Banco de dados e auditoria
+        Y[Registro de ação do drone] --> Z{Troca de informações concluída?}
+        Z -->|Sim| AA[fazer criptografia] --> AB[armazenar no banco de dados]
+        Z -->|Não| AC[tenta novamente] --> Y
+    end
 ```
 # Diagrama de Casos de Uso
 
