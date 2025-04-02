@@ -218,8 +218,7 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
 
 # Diagrama de Atividades - Sistema Falcão Sombrio
 
-```mermaid
-graph TD
+```graph TD
     %% Estilo
     classDef default fill:#f4f4f4, stroke:#333, stroke-width:2px
     classDef critical fill:#ffe6e6, stroke:#990000
@@ -229,39 +228,43 @@ graph TD
     %% Título
     A[Funcionais] --> B((Início))
 
-    %% Subgrupos
-    subgraph Sistemas Embarcados e Segurança
-        C[Login] --> D{Permissão autorizada?}
-        D -->|Sim| E[Logs de acesso]
-        D -->|Não| F[Permissão negada] --> G{Restam tentativas?}
-        G -->|Sim| H[Alerta de segurança] --> I((Fim))
-        G -->|Não| C
+    %% Layout principal (2 colunas x 2 linhas)
+    subgraph Coluna 1
+        direction TB
+        subgraph Banco de Dados e Auditoria
+            Y[Registro de ação do drone] --> Z{Troca de informações concluída?}
+            Z -->|Sim| AA[fazer criptografia] --> AB[armazenar no banco de dados]
+            Z -->|Não| AC[tenta novamente] --> Y
+        end
+
+        subgraph Navegação Sistema de Navegação Inteligente / Gerenciamento de Comunicação
+            O[Drone executa a tarefa] --> P{Detectou ameaça?}
+            P -->|Sim| Q[Drone desvia] --> R{Fallback?}
+            R -->|Sim| S[Troca de dados com o sistema] --> T{Missão possível?}
+            R -->|Não| U[Fallback] --> V[Retorno do drone] --> W((Fim))
+            P -->|Não| O
+            T -->|Sim| O
+            T -->|Não| X[Abortar missão] --> W
+        end
     end
 
-    subgraph Central de Controle
-        J[Acesso a interface] --> K{Controle do drone}
-        K --> L[Autônomo]
-        K --> M[Controle remoto]
-        L --> N[Dashboard com telemetria]
-        M --> N
-    end
+    subgraph Coluna 2
+        direction TB
+        subgraph Central de Controle
+            J[Acesso à interface] --> K{Controle do drone}
+            K --> L[Autônomo]
+            K --> M[Controle remoto]
+            L --> N[Dashboard com telemetria]
+            M --> N
+        end
 
-    %% Fluxo de Navegação
-    subgraph Navegação Sistema de Navegação Inteligente / Gerenciamento de Comunicação
-        O[Drone executa a tarefa] --> P{Detectou ameaça?}
-        P -->|Sim| Q[Drone desvia] --> R{Fallback?}
-        R -->|Sim| S[Troca de dados com o sistema] --> T{Missão possível?}
-        R -->|Não| U[Fallback] --> V[Retorno do drone] --> W((Fim))
-        P -->|Não| O
-        T -->|Sim| O
-        T -->|Não| X[Abortar missão] --> W
-    end
-
-    %% Banco de Dados e Auditoria
-    subgraph Banco de Dados e Auditoria
-        Y[Registro de ação do drone] --> Z{Troca de informações concluída?}
-        Z -->|Sim| AA[fazer criptografia] --> AB[armazenar no banco de dados]
-        Z -->|Não| AC[tenta novamente] --> Y
+        subgraph Sistemas Embarcados e Segurança
+            C[Login] --> D{Permissão autorizada?}
+            D -->|Sim| E[Logs de acesso]
+            D -->|Não| F[Permissão negada] --> G{Restam tentativas?}
+            G -->|Sim| H[Alerta de segurança] --> I((Fim))
+            G -->|Não| C
+        end
     end
 ```
 # Diagrama de Casos de Uso
