@@ -217,96 +217,58 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
 </table>
 
 # Diagrama de Atividades - Sistema Falcão Sombrio
-
 ```mermaid
 graph TD
-    %% Estilo
     classDef default fill:#f4f4f4, stroke:#333, stroke-width:2px
-    classDef critical fill:#ffe6e6, stroke:#990000
-    classDef secure fill:#e6ffe6, stroke:#006600
     classDef database fill:#e6f2ff, stroke:#003366
 
-    %% Título
-    A[Funcionais] --> B((Início))
-
-    %% Layout principal (2 colunas x 2 linhas)
-    subgraph Coluna 1
-        direction TB
-        subgraph Banco de Dados e Auditoria
-            Y[Registro de ação do drone] --> Z{Troca de informações concluída?}
-            Z -->|Sim| AA[fazer criptografia] --> AB[armazenar no banco de dados]
-            Z -->|Não| AC[tenta novamente] --> Y
-        end
-
-```
-
-```mermaid
-graph TD
-    %% Estilo
-    classDef default fill:#f4f4f4, stroke:#333, stroke-width:2px
-    classDef critical fill:#ffe6e6, stroke:#990000
-    classDef secure fill:#e6ffe6, stroke:#006600
-    classDef database fill:#e6f2ff, stroke:#003366
-
-    %% Título
-    A[Funcionais] --> B((Início))
-
-
-    subgraph Navegação Sistema de Navegação Inteligente / Gerenciamento de Comunicação
-                O[Drone executa a tarefa] --> P{Detectou ameaça?}
-                P -->|Sim| Q[Drone desvia] --> R{Fallback?}
-                R -->|Sim| S[Troca de dados com o sistema] --> T{Missão possível?}
-                R -->|Não| U[Fallback] --> V[Retorno do drone] --> W((Fim))
-                P -->|Não| O
-                T -->|Sim| O
-                T -->|Não| X[Abortar missão] --> W
-            end
-        end
-
-        direction TB
-       
+    subgraph "Banco de Dados e Auditoria"
+        Y[Registro de ação do drone] --> Z{Troca de informações concluída?}
+        Z -->|Sim| AA[fazer criptografia] --> AB[armazenar no banco de dados]
+        Z -->|Não| AC[tenta novamente] --> Y
+        class Y,Z,AA,AB,AC database
     end
-```
-```mermaid
+
 graph TD
-    %% Estilo
     classDef default fill:#f4f4f4, stroke:#333, stroke-width:2px
     classDef critical fill:#ffe6e6, stroke:#990000
-    classDef secure fill:#e6ffe6, stroke:#006600
-    classDef database fill:#e6f2ff, stroke:#003366
 
-    %% Título
-    A[Funcionais] --> B((Início))
+    subgraph "Navegação e Comunicação"
+        O[Drone executa a tarefa] --> P{Detectou ameaça?}
+        P -->|Sim| Q[Drone desvia] --> R{Fallback?}
+        R -->|Sim| S[Troca de dados com o sistema] --> T{Missão possível?}
+        R -->|Não| U[Fallback] --> V[Retorno do drone] --> W((Fim))
+        P -->|Não| O
+        T -->|Sim| O
+        T -->|Não| X[Abortar missão] --> W
+        class O,P,Q,R,S,T,U,V,X critical
+    end
 
-
-subgraph Central de Controle
-            J[Acesso à interface] --> K{Controle do drone}
-            K --> L[Autônomo]
-            K --> M[Controle remoto]
-            L --> N[Dashboard com telemetria]
-            M --> N
-        end
-
-```
-```mermaid
 graph TD
-    %% Estilo
     classDef default fill:#f4f4f4, stroke:#333, stroke-width:2px
-    classDef critical fill:#ffe6e6, stroke:#990000
-    classDef secure fill:#e6ffe6, stroke:#006600
     classDef database fill:#e6f2ff, stroke:#003366
 
-    %% Título
-    A[Funcionais] --> B((Início))
+    subgraph "Central de Controle"
+        J[Acesso à interface] --> K{Controle do drone}
+        K --> L[Autônomo]
+        K --> M[Controle remoto]
+        L --> N[Dashboard com telemetria]
+        M --> N
+        class J,K,L,M,N database
+    end
 
- subgraph Sistemas Embarcados e Segurança
-            C[Login] --> D{Permissão autorizada?}
-            D -->|Sim| E[Logs de acesso]
-            D -->|Não| F[Permissão negada] --> G{Restam tentativas?}
-            G -->|Sim| H[Alerta de segurança] --> I((Fim))
-            G -->|Não| C
-        end
+graph TD
+    classDef default fill:#f4f4f4, stroke:#333, stroke-width:2px
+    classDef secure fill:#e6ffe6, stroke:#006600
 
+    subgraph "Sistemas Embarcados e Segurança"
+        C[Login] --> D{Permissão autorizada?}
+        D -->|Sim| E[Logs de acesso]
+        D -->|Não| F[Permissão negada] --> G{Restam tentativas?}
+        G -->|Sim| H[Alerta de segurança] --> I((Fim))
+        G -->|Não| C
+        class C,D,F,H,I secure
+    end
 ```
 *&lt;Diagrama para visualizar o comportamento dos atores&gt;*
 
