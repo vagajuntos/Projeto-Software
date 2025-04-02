@@ -264,7 +264,7 @@ graph TD
     classDef default fill:#f4f4f4, stroke:#333, stroke-width:2px
     classDef secure fill:#e6ffe6, stroke:#006600
 
-    subgraph "Sistemas Embarcados e Segurança"
+    subgraph "Segurança"
         C[Login] --> D{Permissão autorizada?}
         D -->|Sim| E[Logs de acesso]
         D -->|Não| F[Permissão negada] --> G{Restam tentativas?}
