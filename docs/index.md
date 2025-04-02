@@ -258,7 +258,7 @@ graph TD
     end
 
     %% Banco de Dados e Auditoria
-    subgraph Banco de dados e auditoria
+    subgraph Banco de Dados e Auditoria
         Y[Registro de ação do drone] --> Z{Troca de informações concluída?}
         Z -->|Sim| AA[fazer criptografia] --> AB[armazenar no banco de dados]
         Z -->|Não| AC[tenta novamente] --> Y
