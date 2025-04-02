@@ -218,7 +218,8 @@ A **Consultoria Cyber Bullet System (Turma 4G)** foi contratada para modelar o n
 
 # Diagrama de Atividades - Sistema Falcão Sombrio
 
-```graph TD
+```mermaid
+graph TD
     %% Estilo
     classDef default fill:#f4f4f4, stroke:#333, stroke-width:2px
     classDef critical fill:#ffe6e6, stroke:#990000
