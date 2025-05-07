@@ -393,7 +393,7 @@ graph TD
 ```mermaid
 sequenceDiagram
     participant Militar as Operador Militar
-    participant SistemaSeguranca as Sistema Embarcado de Segurança
+    participant SistemaSeguranca as Sistema de Segurança
     participant CentralControle as Central de Controle
     participant Drone
     participant Navegacao as Sistema de Navegação
@@ -425,6 +425,9 @@ sequenceDiagram
         Drone->>Navegacao: Enviar telemetria (GPS, sensores)
         Navegacao->>CentralControle: Atualizar dashboard
         CentralControle->>BancoDados: Armazenar logs (AES-256)
+        activate BancoDados
+        BancoDados-->>CentralControle: Confirmação
+        deactivate BancoDados
     end
 
     %% Tratamento de Ameaças
@@ -440,13 +443,15 @@ sequenceDiagram
     %% Conclusão da Missão
     Drone->>CentralControle: Missão concluída
     CentralControle->>BancoDados: Sincronizar dados (Cassandra)
+    activate BancoDados
     BancoDados-->>CentralControle: Dados replicados
+    deactivate BancoDados
     CentralControle-->>Militar: Relatório final
+
     deactivate CentralControle
     deactivate Drone
     deactivate Navegacao
-```
-
+````
 # Diagrama de Classes
 
 *&lt;Diagrama de relacionamento entre classes para os seus atributos e operações&gt;*
