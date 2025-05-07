@@ -415,7 +415,7 @@ sequenceDiagram
     CentralControle-->>Militar: Missão validada
 
     %% Execução da Missão
-    CentralControle->>Drone: Transmitir ordens (MQTT/TLS)
+    CentralControle->>Drone: Transmitir ordens 
     activate Drone
     Drone->>Navegacao: Iniciar navegação autônoma
     activate Navegacao
@@ -424,7 +424,7 @@ sequenceDiagram
     loop Durante a missão
         Drone->>Navegacao: Enviar telemetria (GPS, sensores)
         Navegacao->>CentralControle: Atualizar dashboard
-        CentralControle->>BancoDados: Armazenar logs (AES-256)
+        CentralControle->>BancoDados: Armazenar logs
         activate BancoDados
         BancoDados-->>CentralControle: Confirmação
         deactivate BancoDados
@@ -442,7 +442,7 @@ sequenceDiagram
 
     %% Conclusão da Missão
     Drone->>CentralControle: Missão concluída
-    CentralControle->>BancoDados: Sincronizar dados (Cassandra)
+    CentralControle->>BancoDados: Sincronizar dados
     activate BancoDados
     BancoDados-->>CentralControle: Dados replicados
     deactivate BancoDados
