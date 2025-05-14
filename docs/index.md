@@ -454,7 +454,206 @@ sequenceDiagram
 ````
 # Diagrama de Classes
 
-*&lt;Diagrama de relacionamento entre classes para os seus atributos e operações&gt;*
+@startuml
+skinparam classAttributeIconSize 0
+
+' Definição de enums
+enum StatusDrone {
+  Espera
+  Missao
+  Retorno
+  Emergencia
+}
+
+enum TipoBancoDeDados {
+  NoSQL
+  SQL
+}
+
+enum NivelAcesso {
+  Administrador
+  Operador
+  Visitante
+}
+
+enum ProtocoloComunicacao {
+  MQTT
+  HTTPS
+}
+
+' Classes principais
+
+class Drone {
+  +String id
+  +StatusDrone status
+  +CoordenadasGPS localizacao
+  +Map<String, Object> dadosSensores
+  +Missao missaoAtual
+  +inicializar(): void
+  +executarMissao(Missao): void
+  +atualizarLocalizacao(CoordenadasGPS): void
+  +enviarDadosTelemetria(): void
+}
+
+class Operador {
+  +String id
+  +String nome
+  +NivelAcesso nivelAcesso
+  +Boolean autenticacaoBiometrica
+  +autenticar(): Boolean
+  +autorizarMissao(Missao): Boolean
+}
+
+class Servidor {
+  +String id
+  +String localizacaoGeografica
+  +StatusServidor status
+  +balancearCarga(): void
+  +failover(): void
+  +monitorarConexao(): void
+}
+
+enum StatusServidor {
+  Ativo
+  Inativo
+}
+
+class BancoDeDados {
+  +TipoBancoDeDados tipo
+  +Boolean replicacao
+  +Boolean criptografia
+  +armazenarDados(Dados): void
+  +recuperarDados(Query): Map<String, Object>
+  +replicarDados(): void
+  +criptografarDados(): void
+}
+
+class Missao {
+  +String id
+  +String nome
+  +String objetivo
+  +StatusMissao status
+  +Lista<CoordenadasGPS> coordenadas
+  +DateTime dataHora
+  +planejar(): void
+  +iniciar(): void
+  +finalizar(): void
+  +registrarLog(Log): void
+}
+
+enum StatusMissao {
+  Planejada
+  EmExecucao
+  Concluida
+  Cancelada
+}
+
+class Comunicacao {
+  +Lista<ProtocoloComunicacao> protocolos
+  +Mbps taxaTransmissao
+  +Boolean criptografia
+  +conectar(): Boolean
+  +desconectar(): void
+  +fallback(): void
+  +verificarLatencia(): Integer
+}
+
+class SistemaNavegacao {
+  +Map<String, Object> sensoriamento
+  +ModeloIA redeNeural
+  +detectarAmeacas(): Lista<Ameaca>
+  +navegarAutonomamente(CoordenadasGPS): void
+}
+
+class Auditoria {
+  +Lista<Log> logs
+  +Boolean assinaturasDigitais
+  +registrarEvento(Evento): void
+  +verificarIntegridade(): Boolean
+}
+
+class Seguranca {
+  +Boolean autenticacaoMultifator
+  +String nivelCriptografia
+  +validarAcesso(Operador): Boolean
+  +verificarAssinaturaDigital(Assinatura): Boolean
+}
+
+' Relacionamentos
+
+Drone --> "1" Missao : executa >
+Drone --> "1..*" Servidor : se comunica com >
+Drone --> "1" SistemaNavegacao : usa >
+Drone --> "1" Comunicacao : utiliza >
+Missao --> "1" Operador : autorizada por >
+Servidor --> "1" BancoDeDados : gerencia >
+BancoDeDados --> "1" Auditoria : armazena logs >
+Operador --> "1" Seguranca : autenticado via >
+
+' Herança/Polimorfismo
+
+abstract class Sensor {
+  +String tipo
+  +Object dados
+}
+
+class LIDAR {
+  +Object dadosLIDAR
+}
+
+class Camera {
+  +Object dadosImagem
+}
+
+class GPS {
+  +CoordenadasGPS coordenadas
+}
+
+Sensor <|-- LIDAR
+Sensor <|-- Camera
+Sensor <|-- GPS
+
+' Pacotes
+
+package "Controle" {
+  class Operador
+  class Missao
+}
+
+package "Navegacao" {
+  class SistemaNavegacao
+}
+
+package "Comunicacao" {
+  class Comunicacao
+}
+
+package "Seguranca" {
+  class Seguranca
+  class Auditoria
+}
+
+package "Infraestrutura" {
+  class Servidor
+  class BancoDeDados
+}
+
+' Notas de Requisitos Não Funcionais
+note right of Drone
+  Requisitos:
+  - Baixa latência
+  - Comunicação segura (MQTT/HTTPS)
+  - Priorização de processos críticos
+end note
+
+note right of BancoDeDados
+  Requisitos:
+  - Replicação e distribuição
+  - Criptografia AES-256
+  - Logs imutáveis
+end note
+
+@enduml 
 
 # Diagrama de Estados
 
