@@ -454,7 +454,7 @@ sequenceDiagram
 ````
 # Diagrama de Classes
 
-![Diagrama do Sistema](diagrama.png)
+![Diagrama do Sistema](DiagramaClasse.png)
 # Diagrama de Estados
 
 *&lt;Diagrama para permite modelar o comportamento interno de um determinado objeto, subsistema ou sistema global&gt;*
