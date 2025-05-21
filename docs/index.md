@@ -456,30 +456,20 @@ sequenceDiagram
 
 ![Diagrama do Sistema](Classes.png)
 # Diagrama de Estados
-
 @startuml
-[*] --> Pronto
+[*] --> Inativo : Inicialização
 
-Pronto : Drone pronto para missão
-Pronto --> Em Execução : Iniciar Missão
+Inativo --> Autenticado : Login do operador
+Autenticado --> AguardandoMissao : Sessão válida
 
-Em Execução : Missão em andamento
-Em Execução --> Em Espera : Pausar Missão
-Em Execução --> Emergência : Detectar Ameaça/Falha
+AguardandoMissao --> ExecutandoMissao : Missão autorizada
+ExecutandoMissao --> MissaoConcluida : Missão finalizada com sucesso
+ExecutandoMissao --> MissaoAbortada : Falha ou ameaça detectada
 
-Em Espera : Aguardando ordem
-Em Espera --> Em Execução : Retomar Missão
-Em Espera --> Finalizado : Concluir Missão
+MissaoConcluida --> ArmazenandoDados : Armazenar logs
+MissaoAbortada --> ArmazenandoDados
 
-Emergência : Situação Crítica
-Emergência --> Retornar à Base : Resolver Situação
-Emergência --> Em Execução : Ignorar Ameaça/Não Crítico
-
-Finalizado : Missão concluída
-Finalizado --> [*]
-
-Retornar à Base : Drone retornando ao local seguro
-Retornar à Base --> Pronto : Recarregar/Reinicializar
+ArmazenandoDados --> Inativo : Pronto para nova missão
 @enduml
 
 # Diagrama de Implantação
