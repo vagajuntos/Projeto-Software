@@ -456,21 +456,7 @@ sequenceDiagram
 
 ![Diagrama do Sistema](Classes.png)
 # Diagrama de Estados
-@startuml
-[*] --> Inativo : Inicialização
-
-Inativo --> Autenticado : Login do operador
-Autenticado --> AguardandoMissao : Sessão válida
-
-AguardandoMissao --> ExecutandoMissao : Missão autorizada
-ExecutandoMissao --> MissaoConcluida : Missão finalizada com sucesso
-ExecutandoMissao --> MissaoAbortada : Falha ou ameaça detectada
-
-MissaoConcluida --> ArmazenandoDados : Armazenar logs
-MissaoAbortada --> ArmazenandoDados
-
-ArmazenandoDados --> Inativo : Pronto para nova missão
-@enduml
+![Diagrama de Estados](estados.png)
 
 # Diagrama de Implantação
 
