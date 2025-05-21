@@ -457,7 +457,30 @@ sequenceDiagram
 ![Diagrama do Sistema](Classes.png)
 # Diagrama de Estados
 
-*&lt;Diagrama para permite modelar o comportamento interno de um determinado objeto, subsistema ou sistema global&gt;*
+@startuml
+[*] --> Pronto
+
+Pronto : Drone pronto para missão
+Pronto --> Em Execução : Iniciar Missão
+
+Em Execução : Missão em andamento
+Em Execução --> Em Espera : Pausar Missão
+Em Execução --> Emergência : Detectar Ameaça/Falha
+
+Em Espera : Aguardando ordem
+Em Espera --> Em Execução : Retomar Missão
+Em Espera --> Finalizado : Concluir Missão
+
+Emergência : Situação Crítica
+Emergência --> Retornar à Base : Resolver Situação
+Emergência --> Em Execução : Ignorar Ameaça/Não Crítico
+
+Finalizado : Missão concluída
+Finalizado --> [*]
+
+Retornar à Base : Drone retornando ao local seguro
+Retornar à Base --> Pronto : Recarregar/Reinicializar
+@enduml
 
 # Diagrama de Implantação
 
