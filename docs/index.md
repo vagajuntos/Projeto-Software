@@ -460,7 +460,7 @@ sequenceDiagram
 
 # Diagrama de Implantação
 
-*&lt;Diagrama para exibir o relacionamento de hardware e software no projeto&gt;*
+![Diagrama de Implantação](implantação.png)
 
 # Referências
 
