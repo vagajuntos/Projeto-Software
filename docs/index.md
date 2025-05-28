@@ -463,5 +463,4 @@ sequenceDiagram
 ![Diagrama de Implantação](implantação.png)
 
 # Referências
-
-*&lt;Lista de referências&gt;*
+- Apostilas dispoinibilizadas no moodle pelo professor
